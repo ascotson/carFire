@@ -1,0 +1,21 @@
+
+<div>
+
+  <h1>{{ car.carname }} (by {{ car.username }})</h1>
+
+  <form name="newCommentForm">
+    <input type="text" ng-model="commentText" placeholder="Write a comment..." required/>
+    <input type="text" ng-model="username" placeholder="Username..." required/>
+    <button ng-disabled="newCommentForm.$invalid" ng-click="addComment(username, commentText)">Add Comment</button>
+  </form>
+<!--
+  {{car.make}}
+  {{car.model}}
+  {{car.year}}
+  {{car.mileage}}
+  {{car.price}} -->
+
+  <ul>
+    <li ng-repeat="comment in comments">{{ comment.username }}: {{ comment.text }}</li>
+  </ul
+</div>
